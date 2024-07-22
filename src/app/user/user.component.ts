@@ -1,20 +1,9 @@
 import { Component,EventEmitter,Input, input ,Output} from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
+import {type User} from "./user.model";
+//import type of User object. we can skip type mentioning over there
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
-// type User = {
-//   id :string,
-//   name: string,
-//   avatar: string
-// }
-// using type alias, type keyword
-interface User {
-  id : string,
-  name: string,
-  avatar: string
 
-}
-
-//using Interface
 @Component({
   selector: 'app-user',
   standalone: true,

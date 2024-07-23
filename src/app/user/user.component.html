@@ -1,0 +1,8 @@
+<app-card>
+    <button [class.active]="selected"(click)="onSelectUser()">
+        <img [src]="imagePath"  [alt]="user.name"/>
+        <!--attribute binding should use for [src] attributes-->
+        <span>{{user.name}}</span>
+        <!--string interpolation syntax is {{}} -->
+    </button>
+</app-card>

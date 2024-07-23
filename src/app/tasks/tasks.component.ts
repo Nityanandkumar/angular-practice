@@ -22,15 +22,13 @@ export class TasksComponent {
     return this.tasksService.getUserTasks(this.userId)
   }
    onCompleteTask(id: string){
-  
+      this.tasksService.removeTask(id);
   }
   onStartAddTask() {
      this.isAddTaskEnabled =true;
   }
-  onCancelAddTask() {
+  onCloseAddTask() {
     this.isAddTaskEnabled=false;
   }
-  onCreateAddTask(taskData : newTaskData) {
-    this.isAddTaskEnabled =false;
-  }
+ 
  }
